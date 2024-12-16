@@ -1,0 +1,20 @@
+body {
+  background-color: rgba(126, 254, 254, 0.648);
+  color: rgb(125, 125, 125);
+  width: 500px;
+  margin-right: 500px;
+  margin-left: 600px;
+  h2{
+    color:rgb(109, 148, 255);
+  }
+}
+button {
+  padding: 5px 20px;
+  background-color: rgb(255, 144, 242);
+  border-style: none;
+  color: white;
+}
+input {
+  height: 20px;
+  font-weight: bold;
+}

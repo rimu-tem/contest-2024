@@ -9,14 +9,61 @@
 <body>
   <h1>推し活遠征費概算</h1>
   <h3>人数
-  <input type="text" id="people" size="10" maxlength="3"><a> 人</a>
+  <input type="text" id="people" size="5" maxlength="3"><a> 人</a>
   </h3>
   <h2>〇交通費</h2>
-  <h3>出発地： <input type="text" id="start" size="10" maxlength="10"><a> 駅</a></h3>
+  <h3>出発地： <select id="start">
+    <option id="non">選択してください</option>
+    <option>宇都宮駅</option>
+    <option>小山駅</option>
+    <option>栃木駅</option>
+    <option>那須塩原駅</option>
+    <option>佐野駅</option>
+    <option>石橋駅</option>
+    <option>雀宮駅</option>
+    <option>東武宇都宮駅</option>
+    <option>野木駅</option>
+    <option>間々田駅</option>
+    <option>小金井駅</option>
+    <option>西那須野駅</option>
+    <option>自治医大駅</option>
+    <option>氏家駅</option>
+    <option>足利駅</option>
+    <option>矢板駅</option>
+    <option>足利市駅</option>
+    <option>岡本駅</option>
+    <option>黒磯駅</option>
+    <option>宝積寺駅</option>
+  </select></h3>
   <h3 id="change">　　↓　　　　　↑　　</h3>
   <h3 id="change">　　　　東京駅</h3>
   <h2>〇宿泊費</h2>
-  <h3>宿泊地： 東京都 <input type="text" id="hotel" size="10" maxlength="10"><a> 区</a></h3>
+  <h3>宿泊地： 東京都 <select id="hotel" aria-setsize="200">
+    <option id="non">選択してください</option>
+    <option>足立区</option>
+    <option>荒川区</option>
+    <option>板橋区</option>
+    <option>江戸川区</option>
+    <option>大田区</option>
+    <option>葛飾区</option>
+    <option>北区</option>
+    <option>江東区</option>
+    <option>品川区</option>
+    <option>渋谷区</option>
+    <option>新宿区</option>
+    <option>杉並区</option>
+    <option>墨田区</option>
+    <option>世田谷区</option>
+    <option>台東区</option>
+    <option>中央区</option>
+    <option>千代田区</option>
+    <option>豊島区</option>
+    <option>中野区</option>
+    <option>練馬区</option>
+    <option>文京区</option>
+    <option>港区</option>
+    <option>目黒区</option>
+  </select></h3>
   <button id="serch">計算する</button>
   <script src="contest.js"></script>
 </body>

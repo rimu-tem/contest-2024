@@ -2,8 +2,8 @@ body {
   background-color: rgba(126, 254, 254, 0.648);
   color: rgb(125, 125, 125);
   width: 500px;
-  margin-right: 500px;
-  margin-left: 600px;
+  margin-right: auto;
+  margin-left: auto;
   h2{
     color:rgb(109, 148, 255);
   }

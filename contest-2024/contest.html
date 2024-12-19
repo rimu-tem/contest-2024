@@ -8,11 +8,11 @@
 </head>
 <body>
   <h1>推し活遠征費概算</h1>
-  <h3>人数
+  <h3>　人数
   <input type="text" id="people" size="5" maxlength="3"><a> 人</a>
   </h3>
   <h2>〇交通費</h2>
-  <h3>出発地： <select id="start">
+  <h3>　出発地： <select id="startStation">
     <option id="non">選択してください</option>
     <option>宇都宮駅</option>
     <option>小山駅</option>
@@ -35,10 +35,10 @@
     <option>黒磯駅</option>
     <option>宝積寺駅</option>
   </select></h3>
-  <h3 id="change">　　↓　　　　　↑　　</h3>
-  <h3 id="change">　　　　東京駅</h3>
+  <h3 id="change">　　　↓　　　　　↑　　</h3>
+  <h3 id="change">　　　　　東京駅</h3>
   <h2>〇宿泊費</h2>
-  <h3>宿泊地： 東京都 <select id="hotel" aria-setsize="200">
+  <h3>　宿泊地： 東京都 <select id="hotelState" aria-setsize="200">
     <option id="non">選択してください</option>
     <option>足立区</option>
     <option>荒川区</option>
@@ -65,6 +65,7 @@
     <option>目黒区</option>
   </select></h3>
   <button id="serch">計算する</button>
+  <div id="result-area"></div>
   <script src="contest.js"></script>
 </body>
 </html>

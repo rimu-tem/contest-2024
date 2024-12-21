@@ -41,7 +41,7 @@ serchButton.addEventListener(
     resultDivision.appendChild(heading);
 
     const paragraph = document.createElement('p');
-    const result = serch(people, startStation, hotelLank);
+    const result = serch(people, startStation, hotelLank, hotelDate);
     paragraph.innerText = result;
     resultDivision.appendChild(paragraph);
   }
@@ -53,11 +53,12 @@ const answers = [
 ]
 
 
-function serch(people, startStation, hotelLank) {
+function serch(people, startStation, hotelLank, hotelDate) {
   let result = answers[0];
   console.log(people);
   console.log(startStation);
   console.log(hotelLank);
+  console.log(hotelDate);
   function station(startStation) {
     if (startStation == '宇都宮駅') {
       let smoney = 1980 * people * 2;

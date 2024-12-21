@@ -5,20 +5,26 @@ const hotelLankSelect= document.getElementById('hotelLank');
 const hotelDateInput = document.getElementById('hotelDate');
 const resultDivision = document.getElementById('result-area');
 const serchButton = document.getElementById('serch');
+startStationSelect.onchange = function start(){
+  let Station = this.value;
+  //console.log(Station);
+  return Station;
+}
+hotelLankSelect.onchange = function hotel(){
+  let Lank = this.value;
+  //console.log(Lank);
+  return Lank;
+}
 
 
 serchButton.addEventListener(
   'click',
   () => {
     const people = peopleInput.value;
-    startStationSelect.onchange = function(){
-      let startStation = this.value;
-      console.log(startStation);
-    }
-    hotelLankSelect.onchange = function(){
-      let hotelLank = this.value;
-      console.log(hotelLank);
-    }
+    const startStation = startStationSelect.onchange('Station');
+    //console.log(startStation);
+    const hotelLank = hotelLankSelect.onchange('Lank');
+    //console.log(hotelLank);
     const hotelDate = hotelDateInput.value;
     if ((people.length === 0) || (startStation.length === 0) || (hotelLank.length === 0) || (hotelDate.length === 0)) {
       return;
@@ -35,7 +41,7 @@ serchButton.addEventListener(
     resultDivision.appendChild(heading);
 
     const paragraph = document.createElement('p');
-    const result = serch(people);
+    const result = serch(people, startStation, hotelLank);
     paragraph.innerText = result;
     resultDivision.appendChild(paragraph);
   }
@@ -47,8 +53,11 @@ const answers = [
 ]
 
 
-function serch(people) {
+function serch(people, startStation, hotelLank) {
   let result = answers[0];
+  console.log(people);
+  console.log(startStation);
+  console.log(hotelLank);
   function station(startStation) {
     if (startStation == '宇都宮駅') {
       let smoney = 1980 * people * 2;
@@ -129,15 +138,15 @@ function serch(people) {
     }
   }
   function hotel(hotelLank) {
-    if (hotelLank == '５つ星ホテル（1泊50000円）') {
+    if (hotelLank == '5つ星ホテル（1泊50000円）') {
       let hmoney = 50000 * people * hotelDate;
       return hmoney;
       //result = result.replaceAll('###hotel###', hmoney);
-    }else if (hotelLank == '４つ星ホテル（1泊35000円）') {
+    }else if (hotelLank == '4つ星ホテル（1泊35000円）') {
       let hmoney = 35000 * people * hotelDate;
       return hmoney;
       //result = result.replaceAll('###hotel###', hmoney);
-    }else if (hotelLank == '３つ星ホテル（1泊15000円）') {
+    }else if (hotelLank == '3つ星ホテル（1泊15000円）') {
       let hmoney = 15000 * people * hotelDate;
       return hmoney;
       //result = result.replaceAll('###hotel###', hmoney);

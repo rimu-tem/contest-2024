@@ -40,7 +40,7 @@ serchButton.addEventListener(
     heading.innerText = '計算結果';
     resultDivision.appendChild(heading);
 
-    const paragraph = document.createElement('p');
+    const paragraph = document.createElement('h4');
     const result = serch(people, startStation, hotelLank, hotelDate);
     paragraph.innerText = result;
     resultDivision.appendChild(paragraph);
@@ -51,7 +51,6 @@ serchButton.addEventListener(
 const answers = [
   '遠征費は総額###money###円です。そのうち交通費は###station###円、宿泊費は###hotel###円、食費は###meal###円です。'
 ]
-
 
 function serch(people, startStation, hotelLank, hotelDate) {
   let result = answers[0];
@@ -158,7 +157,7 @@ function serch(people, startStation, hotelLank, hotelDate) {
     }
   }
   function meal(hotelDate) {
-    let mmoney = 6000 * people * hotelDate
+    let mmoney = hotelDate * people * 12000;
     return mmoney;
     //result = result.replaceAll('###meal###', mmoney);
   }

@@ -6,6 +6,12 @@ body {
   margin-left: auto;
   h2{
     color:rgb(109, 148, 255);
+    change{
+      font-weight: bold;
+    }
+  }
+  h5 {
+    line-height: 0%;
   }
 }
 button {

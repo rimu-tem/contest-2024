@@ -150,3 +150,21 @@ function serch(people, startStation, hotelLank, hotelDate) {
 
   return result4;
 }
+
+//テストを行う関数
+function test() {
+  console.log('検索結果の文章のテスト');
+
+  //1人, 宇都宮駅, 3つ星ホテル, 1泊
+  console.log('1人, 宇都宮駅, 3つ星ホテル, 1泊')
+  console.assert(
+    serch('1, 宇都宮駅, 3つ星ホテル, 1') === 
+    '遠征費は総額30960円です。そのうち交通費は3960円、宿泊費は15000円、食費は12000円です。'
+  );
+
+  //1人, 小山駅, 3つ星ホテル, 1泊
+  console.log('1人, 小山駅, 3つ星ホテル, 1泊')
+  console.assert(
+    serch('1, 小山駅, 3つ星ホテル, 1') === 
+    '遠征費は総額30036円です。そのうち交通費は3036円、宿泊費は15000円、食費は12000円です。'
+}

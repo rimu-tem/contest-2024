@@ -19,51 +19,50 @@
 
   <div class="container pt-5">
    <h1>💙推し活遠征費概算システム💙</h1>
-    <div class="row">
-      <div class="col-sm-9 col-lg-6">
-        <div class="input-group mb-3">
-          <h3>　人数
-            <input type="text" id="people" size="5" maxlength="3"><a> 人</a>
-          </h3>
-        </div>
-      </div>
+    <div class="input-group flex-nowrap">
+      <span class="input-group-text" id="inputGroup-sizing-sm">人数</span>
+      <input type="text" class="form-control" id="people" size="2" maxlength="3" aria-describedby="addon-wrapping">
+      <span class="input-group-text" id="inputGroup-sizing-sm">人</span>
     </div>
    <h2>❤交通費</h2>
-   <h3>　出発地： <select id="startStation">
-      <option value="">選択してください</option>
-      <option value="宇都宮駅">宇都宮駅</option>
-      <option value="小山駅">小山駅</option>
-      <option value="栃木駅">栃木駅</option>
-      <option value="那須塩原駅">那須塩原駅</option>
-      <option value="佐野駅">佐野駅</option>
-      <option value="石橋駅">石橋駅</option>
-      <option value="東武宇都宮駅">東武宇都宮駅</option>
-      <option value="野木駅">野木駅</option>
-      <option value="間々田駅">間々田駅</option>
-      <option value="小金井駅">小金井駅</option>
-      <option value="西那須野駅">西那須野駅</option>
-      <option value="自治医大駅">自治医大駅</option>
-      <option value="氏家駅">氏家駅</option>
-      <option value="矢板駅">矢板駅</option>
-      <option value="足利市駅">足利市駅</option>
-      <option value="岡本駅">岡本駅</option>
-      <option value="黒磯駅">黒磯駅</option>
-      <option value="宝積寺駅">宝積寺駅</option>
-    </select></h3>
+   <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        選択してください
+      </button>
+      <h3>　出発地：</h3>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#" value="">選択してください</a></li>
+          <li><a class="dropdown-item" href="#" value="宇都宮駅">宇都宮駅</a></li>
+          <li><a class="dropdown-item" href="#" value="小山駅">小山駅</a></li>
+          <li><a class="dropdown-item" href="#" value="栃木駅">栃木駅</a></li>
+          <li><a class="dropdown-item" href="#" value="那須塩原駅">那須塩原駅</a></li>
+          <li><a class="dropdown-item" href="#" value="佐野駅">佐野駅</a></li>
+          <li><a class="dropdown-item" href="#" value="石橋駅">石橋駅</a></li>
+          <li><a class="dropdown-item" href="#" value="東武宇都宮駅">東武宇都宮駅</a></li>
+          <li><a class="dropdown-item" href="#" value="野木駅">野木駅</a></li>
+          <li><a class="dropdown-item" href="#" value="間々田駅">間々田駅</a></li>
+          <li><a class="dropdown-item" href="#" value="小金井駅">小金井駅</a></li>
+          <li><a class="dropdown-item" href="#" value="西那須野駅">西那須野駅</a></li>
+          <li><a class="dropdown-item" href="#" value="自治医大駅">自治医大駅</a></li>
+          <li><a class="dropdown-item" href="#" value="氏家駅">氏家駅</a></li>
+          <li><a class="dropdown-item" href="#" value="矢板駅">矢板駅</a></li>
+          <li><a class="dropdown-item" href="#" value="足利市駅">足利市駅</a></li>
+          <li><a class="dropdown-item" href="#" value="岡本駅">岡本駅</a></li>
+          <li><a class="dropdown-item" href="#" value="黒磯駅">黒磯駅</a></li>
+          <li><a class="dropdown-item" href="#" value="宝積寺駅">宝積寺駅</a></li>
+        </ul>
+    </div>
   
    <h5>　　　　　　　※栃木県内の主要な駅のみ選択できます。</h5>
    <h2 id="change">　　↓　　　　↑　　</h2>
    <h3 id="change">　　　　　東京駅</h3>
    <h2>❤宿泊費</h2>
-    <div class="row">
-      <div class="col-sm-9 col-lg-6">
-        <div class="input-group mb-3">
-          <h3>
-            　<input type="text" id="hotelDate" size="5" maxlength="3"><a> 泊</a>
-          </h3>
-        </div>
-      </div>
+    <div class="input-group flex-nowrap">
+      <span class="input-group-text" id="inputGroup-sizing-sm">宿泊日数</span>
+      <input type="text" class="form-control" id="hotelDate" size="5" maxlength="3" aria-describedby="addon-wrapping">
+      <span class="input-group-text" id="inputGroup-sizing-sm">泊</span>
     </div>
+    <br>
     <h3>　ホテルのランク： <select id="hotelLank">
       <option value="">選択してください</option>
       <option value="5つ星ホテル（1泊50000円）">5つ星ホテル（1泊50000円）</option>
@@ -73,12 +72,8 @@
     </select></h3>
    <h2>❤食費</h2>
    <h3>　1人1泊12000円</h3>
-    <div class="row">
-      <div class="col-sm-9 col-lg-6">
-        <div class="input-group mb-3">
-          <button id="serch">計算する</button>
-        </div>
-      </div>
+   <div class="position-absolute bottom-30 start-50 translate-middle-x">
+     <button type="button" class="btn btn-outline-primary">計算する</button>
     </div>
    <div id="result-area"></div>
   </div>

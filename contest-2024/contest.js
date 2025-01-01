@@ -27,12 +27,34 @@ serchButton.addEventListener(
       return;
     }
     
+    resultDivision.innerText = '';
+    // headerDivision の作成
+    const headerDivision = document.createElement('div');
+    headerDivision.setAttribute('class', 'card-header text-bg-info');
+    headerDivision.innerText = '計算結果';
+
+    // bodyDivision の作成
+    const bodyDivision = document.createElement('div');
+    bodyDivision.setAttribute('class', 'card-body');
+
+    const paragraph = document.createElement('p');
+    paragraph.setAttribute('class', 'card-text');
+    const result = serch(people, startStation, hotelLank, hotelDate);
+    paragraph.innerText = result;
+    bodyDivision.appendChild(paragraph);
+
+    // resultDivision に Bootstrap のスタイルを適用する
+    resultDivision.setAttribute('class', 'card');
+
+    // headerDivision と bodyDivision を resultDivision に差し込む
+    resultDivision.appendChild(headerDivision);
+    resultDivision.appendChild(bodyDivision);
 
 
 
 
     //計算結果表示エリア
-    resultDivision.innerText = '';
+    /*resultDivision.innerText = '';
     const heading = document.createElement('h3');
     heading.innerText = '計算結果';
     resultDivision.appendChild(heading);
@@ -40,10 +62,19 @@ serchButton.addEventListener(
     const paragraph = document.createElement('h4');
     const result = serch(people, startStation, hotelLank, hotelDate);
     paragraph.innerText = result;
-    resultDivision.appendChild(paragraph);
+    resultDivision.appendChild(paragraph);*/
   }
 
 );
+
+hotelLankSelect.addEventListener(
+  'keydown',
+  (event) => {
+    if (event.code === 'Enter') {
+      serchButton.dispatchEvent(new Event('click'))
+    }
+  }
+)
 
 const answers = [
   '遠征費は総額###money###円です。そのうち交通費は###station###円、宿泊費は###hotel###円、食費は###meal###円です。'

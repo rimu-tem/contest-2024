@@ -25,34 +25,28 @@
       <span class="input-group-text" id="inputGroup-sizing-sm">人</span>
     </div>
    <h2>❤交通費</h2>
-   <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        選択してください
-      </button>
-      <h3>　出発地：</h3>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#" value="">選択してください</a></li>
-          <li><a class="dropdown-item" href="#" value="宇都宮駅">宇都宮駅</a></li>
-          <li><a class="dropdown-item" href="#" value="小山駅">小山駅</a></li>
-          <li><a class="dropdown-item" href="#" value="栃木駅">栃木駅</a></li>
-          <li><a class="dropdown-item" href="#" value="那須塩原駅">那須塩原駅</a></li>
-          <li><a class="dropdown-item" href="#" value="佐野駅">佐野駅</a></li>
-          <li><a class="dropdown-item" href="#" value="石橋駅">石橋駅</a></li>
-          <li><a class="dropdown-item" href="#" value="東武宇都宮駅">東武宇都宮駅</a></li>
-          <li><a class="dropdown-item" href="#" value="野木駅">野木駅</a></li>
-          <li><a class="dropdown-item" href="#" value="間々田駅">間々田駅</a></li>
-          <li><a class="dropdown-item" href="#" value="小金井駅">小金井駅</a></li>
-          <li><a class="dropdown-item" href="#" value="西那須野駅">西那須野駅</a></li>
-          <li><a class="dropdown-item" href="#" value="自治医大駅">自治医大駅</a></li>
-          <li><a class="dropdown-item" href="#" value="氏家駅">氏家駅</a></li>
-          <li><a class="dropdown-item" href="#" value="矢板駅">矢板駅</a></li>
-          <li><a class="dropdown-item" href="#" value="足利市駅">足利市駅</a></li>
-          <li><a class="dropdown-item" href="#" value="岡本駅">岡本駅</a></li>
-          <li><a class="dropdown-item" href="#" value="黒磯駅">黒磯駅</a></li>
-          <li><a class="dropdown-item" href="#" value="宝積寺駅">宝積寺駅</a></li>
-        </ul>
-    </div>
-  
+   <h3>　出発地： <select id="startStation">
+    <option value="">選択してください</option>
+    <option value="宇都宮駅">宇都宮駅</option>
+    <option value="小山駅">小山駅</option>
+    <option value="栃木駅">栃木駅</option>
+    <option value="那須塩原駅">那須塩原駅</option>
+    <option value="佐野駅">佐野駅</option>
+    <option value="石橋駅">石橋駅</option>
+    <option value="雀宮駅">雀宮駅</option>
+    <option value="東武宇都宮駅">東武宇都宮駅</option>
+    <option value="野木駅">野木駅</option>
+    <option value="間々田駅">間々田駅</option>
+    <option value="小金井駅">小金井駅</option>
+    <option value="西那須野駅">西那須野駅</option>
+    <option value="自治医大駅">自治医大駅</option>
+    <option value="氏家駅">氏家駅</option>
+    <option value="矢板駅">矢板駅</option>
+    <option value="足利市駅">足利市駅</option>
+    <option value="岡本駅">岡本駅</option>
+    <option value="黒磯駅">黒磯駅</option>
+    <option value="宝積寺駅">宝積寺駅</option>
+  </select></h3>
    <h5>　　　　　　　※栃木県内の主要な駅のみ選択できます。</h5>
    <h2 id="change">　　↓　　　　↑　　</h2>
    <h3 id="change">　　　　　東京駅</h3>
@@ -72,9 +66,13 @@
     </select></h3>
    <h2>❤食費</h2>
    <h3>　1人1泊12000円</h3>
-   <div class="position-absolute bottom-30 start-50 translate-middle-x">
+   <br>
+    <div class="position-absolute bottom-30 start-50 translate-middle-x" id="serch">
      <button type="button" class="btn btn-outline-primary">計算する</button>
     </div>
+    <br>
+    <br>
+    <br>
    <div id="result-area"></div>
   </div>
   <script src="contest.js"></script>
